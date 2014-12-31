@@ -42,9 +42,9 @@ module.exports = MyApp = React.createClass({
 
         <h2>{this.state.title}</h2>
 
-        <div style={{width: '150px'}}>
+        <div style={{maxWidth: '250px'}}>
 
-          <div style={{'fontSize': '20px', 'textAlign': 'center'}} className="alert alert-info">
+          <div style={{fontSize: '20px', textAlign: 'center'}} className="alert alert-success">
             Total: {this.state.total}
           </div>
 
@@ -58,7 +58,7 @@ module.exports = MyApp = React.createClass({
                     <span className="input-group-btn">
                       <button className="btn btn-default btn-primary" type="button" onClick={self.handleMinusClick.bind(self, key)} disabled={isMinusDisabled}>-</button>
                     </span>
-                    <input type="text" className="form-control" value={science.count} />
+                    <input type="text" className="form-control science-score" value={science.count} disabled={true}/>
                     <span className="input-group-btn">
                       <button className="btn btn-default btn-primary" type="button" onClick={self.handlePlusClick.bind(self, key)}>+</button>
                     </span>
